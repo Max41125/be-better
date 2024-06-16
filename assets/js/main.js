@@ -6,6 +6,19 @@ document.addEventListener('DOMContentLoaded', function(){
     BurgerButton.addEventListener('click', function(){
         BurgerButton.classList.toggle('active');
         Submenu.classList.toggle('active');
-    })
 
+    });
+
+    let li = Submenu.querySelectorAll('li');
+    li.forEach(item => {
+
+        item.addEventListener('click', function(){
+
+            BurgerButton.classList.toggle('active');
+            Submenu.classList.toggle('active');
+
+        })
+
+
+    })
 });
