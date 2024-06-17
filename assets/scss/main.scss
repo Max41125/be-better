@@ -549,7 +549,84 @@ header{
         
     }   
     
-}      
+}
+
+
+
+/*Modal form*/
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility:hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    z-index: 10000;
+    background: #00000030;
+    
+    &.active{
+        opacity: 1;
+        visibility:visible;
+
+        }
+
+    &__body{
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 894px;
+        background: #FFF;
+        border-radius:20px;
+        padding: 45px 37px ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .modal__close{
+            position: absolute;
+            top: 43px;
+            right: 52px;
+            
+            }
+
+        .modal__content{
+            
+            display: flex;
+            flex-direction: column;
+            .modal__title{
+                margin-bottom: 10px;
+                font-size: 29px;
+                font-weight:700;
+                max-width: 350px;
+                }
+
+
+            }
+            .modal__text{
+                margin-bottom: 17px;
+                font-size: 19px;
+                line-height: 30px;
+                max-width: 358px;
+
+                }
+            .call__me{
+                
+                
+                
+                }
+
+        }
+    
+    }
+
+
+
 /*text decoration*/
 
     .decor{
@@ -684,18 +761,12 @@ header{
     margin:50px 0 50px 0;
     &__wrapper{
         gap: 20px;
-
         &__item{
-            
             &:first-child{
-
-
                 .main__info{
 
                     margin-bottom: 15px;
-                    p{
-                        
-                        }
+
                     }
 
                 h1{

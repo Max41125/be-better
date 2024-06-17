@@ -17,8 +17,28 @@ document.addEventListener('DOMContentLoaded', function(){
             BurgerButton.classList.toggle('active');
             Submenu.classList.toggle('active');
 
-        })
+        });
 
 
-    })
+    });
+    let modal = document.querySelector('.modal');
+    let close = document.querySelector('.modal__close');
+
+
+    close.addEventListener('click', function() {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+
+
 });
+let modal = document.querySelector('.modal');
+function openModal(){
+    modal.classList.add('active');
+}
