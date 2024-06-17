@@ -430,7 +430,7 @@ header{
                     display: flex;
                     flex-direction: column;
                     transform: translateX(140%);
-                    position: absolute;
+                    position: fixed;
                     width: 100%;
                     background:#FFF;
                     max-width: 320px;

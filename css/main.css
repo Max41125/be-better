@@ -451,7 +451,7 @@ header .contact__item .tel a {
             flex-direction: column;
     -webkit-transform: translateX(140%);
             transform: translateX(140%);
-    position: absolute;
+    position: fixed;
     width: 100%;
     background: #FFF;
     max-width: 320px;
