@@ -641,6 +641,127 @@ header .contact__item .tel a {
   line-height: 30px;
   max-width: 358px;
 }
+.modal__body #call__me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
+.modal__body #call__me p {
+  margin-bottom: 5px;
+  font-size: 11px;
+  line-height: 24px;
+}
+.modal__body #call__me .custom__select {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #DADADA;
+  border-radius: 200px;
+  position: relative;
+  max-height: 69px;
+  padding-top: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.modal__body #call__me .custom__select::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.99992 0.892428C8.99992 1.03267 8.94983 1.15789 8.84966 1.26809L5.09309 5.02465C4.9829 5.13485 4.85768 5.18994 4.71744 5.18994C4.57719 5.18994 4.45197 5.13485 4.34178 5.02465L0.585211 1.26809C0.475018 1.15789 0.419922 1.03267 0.419922 0.892428C0.419922 0.752183 0.475018 0.626965 0.585211 0.516772C0.695404 0.406579 0.820622 0.351483 0.960868 0.351483H8.474C8.61425 0.351483 8.73947 0.406579 8.84966 0.516772C8.95985 0.626965 9.00994 0.752183 8.99992 0.892428Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.modal__body #call__me .custom__select.active {
+  border-radius: 20px;
+  max-height: 400px;
+}
+.modal__body #call__me .custom__select.active::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.modal__body #call__me .custom__select.active .custom__options span {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.modal__body #call__me .custom__select.active .custom__options span:first-child {
+  border-top: 1px solid #DADADA;
+}
+.modal__body #call__me .custom__select.active .custom__options span:hover {
+  background: #dedede;
+}
+.modal__body #call__me .custom__select span {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 21px;
+  font-size: 14px;
+}
+.modal__body #call__me .custom__select .custom__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.modal__body #call__me .custom__select .custom__options span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #DADADA;
+}
+.modal__body #call__me .custom__select .custom__options span:last-child {
+  border-bottom: 0;
+}
+.modal__body #call__me input {
+  padding: 29px 21px;
+  border: 1px solid #EBEBEB;
+  color: #7A7A7A;
+  font-size: 13px;
+  border-radius: 200px;
+}
+.modal__body #call__me input::-webkit-input-placeholder {
+  color: #7A7A7A;
+  font-size: 13px;
+}
+.modal__body #call__me input::-moz-placeholder {
+  color: #7A7A7A;
+  font-size: 13px;
+}
+.modal__body #call__me input:-ms-input-placeholder {
+  color: #7A7A7A;
+  font-size: 13px;
+}
+.modal__body #call__me input::-ms-input-placeholder {
+  color: #7A7A7A;
+  font-size: 13px;
+}
+.modal__body #call__me input::placeholder {
+  color: #7A7A7A;
+  font-size: 13px;
+}
+
 /*text decoration*/
 .decor {
   border: 4px solid #8ADED2;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Залупа коня</title>
+    <title>Be Better</title>
     <link rel="stylesheet" href="assets/fonts/stylesheet.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -552,22 +552,27 @@
                         и определим удобное время для бесплатного пробного занятия</p>
                 </div>
 
-                <form action="" id="call__me">
-                    <p>как с вами удобнее связаться?</p>
-                    <input type="hidden" id="type_tel">
+                <form action="" id="call__me" >
+                    <p>Как с вами удобнее связаться?</p>
+                    <input type="hidden" id="type_tel" name="type_tel" value="Whatsapp">
                 
                     <div class="custom__select">
                         
-                        <span></span>
+                        <span>Whatsapp</span>
 
                         <div class="custom__options">
 
-
+                            <span data-value="Whatsapp">Whatsapp</span>
+                            <span data-value="Telegram"> Telegram</span>
+                            <span data-value="По телефону">По телефону</span>
 
                         </div>
 
                     </div>
 
+                    <input type="tel" placeholder="Введите телефон *">
+
+                    <button type="submit" class="btn__1">записаться на пробный урок</button>
                 </form>
 
 
