@@ -7,6 +7,19 @@
     list-style-type:none;
     list-style: none;
 }
+*::-webkit-scrollbar{
+
+    width: 5px;
+}
+*::-webkit-slider-thumb{
+
+    background: #FFF;
+
+}
+*::-webkit-scrollbar-thumb{
+    background-color:#131514;    
+    border-radius: 20px;
+}
 body{
     font-family: "RoadRadio";
     box-sizing: border-box;
@@ -19,6 +32,9 @@ body{
     overflow-x: hidden;
     list-style: none;    
     color: #131514;
+    &.locked{
+        overflow: hidden
+        }
     }
 
 h1{
@@ -117,6 +133,7 @@ p{
     color:#131514;
     border-radius:15px;
     font-size: 16px;
+    background:transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,9 +144,30 @@ p{
         
         background: #25D366;
         
+    }
+}
+.btn__3{
+    text-align: center;
+    width:100%;
+    max-width: 200px;
+    padding: 20px;
+    border: 1px solid #71C3B8;
+    color:#131514;
+    border-radius:15px;
+    font-size: 16px;
+    background:transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+        
+        background: #71C3B8;
+        
         }
     }
-
     .tel a{
         transition: 0.3s ease-in-out;
         position: relative;
@@ -587,12 +625,13 @@ header{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
 
         .modal__close{
             position: absolute;
             top: 43px;
             right: 52px;
-            
+            cursor: pointer;
             }
 
         .modal__content{
@@ -717,6 +756,7 @@ header{
                     color: #7A7A7A;
                     font-size: 13px;
                     border-radius: 200px; 
+                    margin-bottom: 20px;
                     &::placeholder{
                         color: #7A7A7A;
                         font-size: 13px;
@@ -724,17 +764,119 @@ header{
                         
                     }
                 
+                button{
+                    max-width: 100%;
+                    }
                 
                 }
 
+          img{
+            max-width: 388px;
+            }          
                 
 
         }
     
     }
+@media screen and (max-width:834px){
+    
+    .modal__body{
+        .modal__close{
+            
+            top: 20px;
+            right: 20px;
+            }
+        img{
+            
+            display: none;
+        }
+        }
+    
+    
+    }
 
+#thanks{
+    .modal__body{
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: flex-start;
+        .modal__content{
+                
+            width: 100%;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            .modal__title{
+                font-size: 28.69px;
+                text-align: center;
+                margin-bottom: 11px;
+            }
+            .modal__text{
+                color: #777C90;
+                font-size: 16px;
+                text-align: center;
+                margin-bottom: 20px;
 
+            }
+            .sochial{
 
+                display:flex;
+                flex-direction: row;
+                gap: 8px;
+                align-items:center;
+                justify-content: center;
+                margin-bottom: 24px;
+
+            }
+            img{
+
+                max-width: 368px;
+            }
+        }
+    }
+}
+
+#politic{
+
+    .modal__body{
+        padding: 40px;
+        
+        height: 80vh;
+        max-width: 480px;
+        overflow: hidden;
+        .modal__close{
+
+            top: 20px;
+            right: 20px;
+        }
+        .modal__content{
+
+            overflow-y: scroll;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+
+            &::-webkit-scrollbar{
+
+                width: 5px;
+            }
+            &::-webkit-slider-thumb{
+    
+                background: #FFF;
+    
+            }
+            &::-webkit-scrollbar-thumb{
+                background-color:#131514;    
+                border-radius: 20px;
+            }
+
+        }
+
+    }
+
+}
 /*text decoration*/
 
     .decor{
@@ -852,6 +994,7 @@ header{
                 
                 svg{
                     width: 100%;
+                    height: auto;
                     max-width: 100%}
                
             }
@@ -909,3 +1052,201 @@ header{
     
     }
 
+.our_goal{
+    margin-bottom: 108px;
+    &__wrapper{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content:space-between;
+
+        &__item{
+
+            &:first-child{
+                    img{
+                        width: 100%;
+                        max-width:595px;
+                    }
+            }
+
+            &:last-child{
+                display: flex;
+                flex-direction: column;
+                max-width: 591px;
+                span{
+
+                    color:#333333;
+                    font-size: 16px;
+                    margin-bottom: 18px;
+                }
+                h2{
+
+                    margin-bottom: 32px;
+                }
+                p{
+
+                    color:#777C90;
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                }
+                
+            }
+            
+    
+        }
+
+    }
+
+}
+
+@media screen and (max-width:1060px){
+
+    .our_goal{
+        margin-bottom: 50px;
+        &__wrapper{
+            gap: 20;
+            flex-direction: column-reverse;
+            &__item{
+
+                &:last-child{
+
+                    h2{
+                        margin-bottom: 15px;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+}
+
+.gallery{
+    margin-bottom: 100px;
+    &__wrapper{
+
+        display: flex;
+        flex-direction: column;
+
+        &__quote{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            gap: 26px;
+            margin-bottom: 19px;
+            img{
+                width: 100%;
+                max-width: 170px;
+            }
+            q{
+                text-align: center;
+                max-width: 838px;
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+        }
+
+        &__title{
+
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 62px;
+            h2{
+
+                font-weight: 300;
+                line-height: 61.6px;
+                max-width: 933px;
+                text-align: center;
+            }
+            h3{
+
+                font-size: 22px;
+                font-weight: 300;
+                max-width: 617px;
+                text-align: center;
+            }
+        }
+
+        &__pictures{
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            gap: 10px;
+            a{
+                display: flex;
+                flex-direction: column;
+                width:calc((100% / 4) - 8px);
+                height: auto;
+                img{
+            
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width:1060px) {
+    
+    .gallery{
+        margin-bottom: 50px;
+        &__wrapper{
+
+            &__title{
+                gap: 15px;
+                margin-bottom: 30px;
+                h2{
+                    line-height: inherit;
+                }
+                h3{
+
+                    font-size: 16px;
+                }
+            }
+
+
+            &__pictures{
+                flex-direction: row;
+                gap: 10px;
+                a{
+                    width: calc((100% / 3) - 8px);
+                   
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:768px) {
+    .gallery{
+        &__wrapper{
+            &__pictures{
+                flex-direction: row;
+                gap: 10px;
+                a{
+                    width: calc((100% / 2) - 8px);
+                   
+                }
+            }
+        }
+    }
+
+    
+}
