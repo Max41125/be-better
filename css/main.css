@@ -1970,6 +1970,9 @@ header .contact__item .tel a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
   padding: 92px 0 89px 0;
 }
 .questions__wrapper__item {
@@ -2017,6 +2020,17 @@ header .contact__item .tel a {
   max-width: 560px;
   color: #1E1926;
   font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 54px;
   line-height: 30px;
 }
 .questions__wrapper__item:last-child .question p {
@@ -2026,4 +2040,322 @@ header .contact__item .tel a {
 }
 .questions__wrapper__item:last-child .question.active {
   max-height: 500px;
+}
+
+@media screen and (max-width: 1060px) {
+  .questions__wrapper {
+    gap: 25px;
+    padding: 50px 0;
+  }
+  .questions__wrapper__item:first-child h2 {
+    margin-bottom: 20px;
+  }
+  .questions__wrapper__item:first-child p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .questions__wrapper__item:first-child button {
+    margin-bottom: 20px;
+  }
+  .questions__wrapper__item:last-child .question {
+    max-height: 99px;
+  }
+  .questions__wrapper__item:last-child .question span {
+    font-size: 16px;
+    min-height: 76px;
+  }
+  .questions__wrapper__item:last-child .question p {
+    font-size: 14px;
+  }
+}
+/*Footer*/
+footer {
+  background-size: 100%;
+  background-color: #131514;
+  color: #FFF;
+}
+footer .decor {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+footer .footer__top {
+  padding-top: 92px;
+  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 59px;
+}
+footer .footer__top .footer__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 34px;
+  max-width: 354px;
+}
+footer .footer__top .footer__benefits ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22px;
+}
+footer .footer__top .footer__benefits ul li {
+  font-size: 16px;
+}
+footer .footer__top p {
+  font-size: 24px;
+}
+footer .footer__top .footer__platform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer__top .footer__platform p {
+  margin-bottom: 28px;
+}
+footer .footer__top .footer__platform span {
+  margin-bottom: 34px;
+  font-size: 14px;
+}
+footer .footer__top .footer__platform a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #FFF;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  color: #FFF;
+  max-width: 167px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+footer .footer__top .footer__platform a:hover {
+  background: #FFF;
+  color: #1E1926;
+}
+footer .footer__top .footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer__top .footer__contact p {
+  margin-bottom: 38px;
+}
+footer .footer__top .footer__contact form div {
+  width: 100%;
+  max-width: 392px;
+  background: #FFF;
+  border-radius: 15px;
+  padding: 8px 10px 8px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 47px;
+}
+footer .footer__top .footer__contact form div span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 195px;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer__top .footer__contact form div span svg {
+  width: 100%;
+  max-width: 12px;
+}
+footer .footer__top .footer__contact form div span input {
+  font-size: 14px;
+  color: #777C90;
+  border: none;
+  max-width: 150px;
+  outline: none;
+}
+footer .footer__top .footer__contact form div span input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #777C90;
+}
+footer .footer__top .footer__contact form div span input::-moz-placeholder {
+  font-size: 14px;
+  color: #777C90;
+}
+footer .footer__top .footer__contact form div span input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #777C90;
+}
+footer .footer__top .footer__contact form div span input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #777C90;
+}
+footer .footer__top .footer__contact form div span input::placeholder {
+  font-size: 14px;
+  color: #777C90;
+}
+footer .footer__top .footer__contact form div button {
+  max-width: 148px;
+  padding: 8px 33px;
+  line-height: 28px;
+  font-size: 14px;
+}
+footer .footer__top .footer__contact .sochial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+footer .footer__top .footer__contact .sochial a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+footer .footer__top .footer__contact .sochial a:hover {
+  scale: 1.05;
+}
+footer .footer__bottom {
+  padding-top: 25px;
+  padding-bottom: 58px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer__bottom .footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+footer .footer__bottom .footer__logo img {
+  width: 100%;
+  max-width: 120px;
+}
+footer .footer__bottom .footer__logo p {
+  font-size: 14px;
+  max-width: 338px;
+  color: #FFF;
+}
+footer .footer__bottom .footer__2gis a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+  color: #FFF;
+}
+footer .footer__bottom .footer__2gis a p {
+  position: relative;
+  display: inline-block;
+  font-size: #FFFFFF;
+  font-size: 14px;
+  font-weight: 300;
+}
+footer .footer__bottom .footer__2gis a p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+footer .footer__bottom .footer__2gis a:hover p::before {
+  width: 100%;
+}
+footer .footer__bottom .footer__copyright {
+  font-size: 16px;
+  color: #FFF;
+}
+
+@media screen and (max-width: 480px) {
+  footer .footer__top .footer__contact {
+    width: 100%;
+  }
+  footer .footer__top .footer__contact form div {
+    padding-left: 15px;
+    max-width: 100%;
+  }
+  footer .footer__top .footer__contact form div button {
+    padding: 8px 20px;
+    max-width: 116px;
+  }
 }
