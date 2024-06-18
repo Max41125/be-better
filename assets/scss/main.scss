@@ -1250,3 +1250,191 @@ header{
 
     
 }
+
+
+.timeline{
+    margin-bottom: 160px;
+    h2{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 23px;
+        max-width: 809px;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:center;
+        flex-wrap: wrap;
+        gap: 50px;
+            &__item{
+
+                &:first-child{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    
+                    .decor__1{
+
+                        position: absolute;
+                        top: -31px;
+                        right: -29px;
+                        z-index: -1;
+                    }
+                    .decor__2{
+
+                        position: absolute;
+                        top: 14%;
+                        left: -31px;
+                     
+                        z-index: -1;
+                    }
+                    a{
+
+                        max-width: 300px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items:center;
+                        justify-content: center;
+                        transition: .3s ease-in-out;
+                        svg{
+                            transition: .3s ease-in-out;
+                            width: 100%;
+                            max-width: 58px;
+                            position: absolute;
+                           
+                        }
+                        &:hover{
+
+                            svg{
+                               scale:1.1;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child{
+                    max-width: 1100px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    position: relative;
+                    row-gap: 55px;
+                    column-gap: 55px;
+                    padding-left: 192px;
+                    .decor__1{
+                        z-index: -1;
+                        position: absolute;
+                        right: 0;
+                        top: 57px;
+                        width: 100%;
+                        max-width: 969px;
+                        svg{
+                            width: 100%;
+                        }
+                    }
+                    .timeline__wrapper__item__cart{
+                        &.green{
+
+                            background: #71C3B8;
+                        }
+                        &.black{
+
+                            background:#131514;
+                           
+                        }
+                        &.yellow{
+                            background:#FCF78C;
+                        }
+                        color: #fff;
+                        width: 100%;
+                        max-width: 266px;
+                        border-radius:12px;
+                        padding: 20px 0px 0 0;
+                        text-align: center;
+                        height: 158px;
+                        display: flex;
+                        flex-direction:column;
+                        align-items:center;
+                        
+                        h3{
+
+                            font-size: 16px;
+                            line-height: 19px;
+                            margin-bottom: 11px;
+                        }
+                        p{
+                            
+                            font-size: 13px;
+                            line-height: 19px;
+                        }
+                        &:nth-child(1){
+
+                            p{
+
+                                max-width: 233px;
+                            }
+                        }
+
+                        &:nth-child(2){
+
+                            p{
+
+                                max-width: 233px;
+                            }
+                        }
+                        &:nth-child(3){
+
+                            p{
+
+                                max-width: 233px;
+                            }
+                        }
+
+                        &:nth-child(4){
+                            position: absolute;
+                            max-width: 160px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0;
+                            h3{
+                                color:#333333;
+
+                            }
+                            p{
+                                color:#333333;
+                                max-width: 138px;
+                            }
+
+                        }
+                        &:nth-child(5){
+                            p{
+
+                                max-width: 198px;
+                            }
+                        }
+                        &:nth-child(6){
+
+                            p{
+
+                                max-width: 227px;
+                            }
+                        }
+                        &:nth-child(7){
+
+                            p{
+
+                                max-width: 249px;
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+
+    }
+}
