@@ -78,7 +78,14 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
     
+    let questions = document.querySelectorAll('.question');
 
+    questions.forEach(item => {
+        item.addEventListener('click', function(e) {
+            questions.forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
 
 
 });
