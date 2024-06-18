@@ -63,6 +63,24 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
     
+
+  
+
+    let radio__tel = document.querySelectorAll('.custom__radio div span');
+    let radio__input = document.querySelector('#radio__tel');
+    
+    radio__tel.forEach(item => {
+        item.addEventListener('click', function(e) {
+            let selectedValue = e.target.getAttribute('data-value');
+            radio__input.value = selectedValue;
+            radio__tel.forEach(el => el.classList.remove('active'));
+            e.target.classList.add('active');
+        });
+    });
+    
+
+
+
 });
 
 
