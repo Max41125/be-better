@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
             BurgerButton.classList.toggle('active');
             Submenu.classList.toggle('active');
+            body.classList.remove('locked');
 
         });
 
@@ -88,6 +89,60 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 
+
+    
+            const inputs = document.querySelectorAll('input[type="tel"]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('input', function (e) {
+                    let value = e.target.value.replace(/\D/g, ''); // Удаляем все нецифровые символы
+                    let formattedValue = '+';
+                    
+                    if (value.length > 0) {
+                        formattedValue += value.substring(0, 1);
+                    }
+                    if (value.length > 1) {
+                        formattedValue += ' (' + value.substring(1, 4);
+                    }
+                    if (value.length > 4) {
+                        formattedValue += ') ' + value.substring(4, 7);
+                    }
+                    if (value.length > 7) {
+                        formattedValue += ' - ' + value.substring(7, 9);
+                    }
+                    if (value.length > 9) {
+                        formattedValue += ' - ' + value.substring(9, 11);
+                    }
+                    
+                    e.target.value = formattedValue;
+                });
+                
+                input.addEventListener('keydown', function (e) {
+                    // Разрешить только цифры, клавиши управления и некоторые специальные клавиши
+                    const allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
+                    if ((e.key >= '0' && e.key <= '9') || allowedKeys.includes(e.key)) {
+                        return true;
+                    }
+                    e.preventDefault();
+                });
+            });
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+
 });
 
 
@@ -100,3 +155,34 @@ function openModal(modalId) {
     modal.classList.add('active');
     body.classList.add('locked');
   }
+
+let form = document.querySelectorAll('form');
+form.forEach(item => {
+
+
+
+    item.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var form = event.target;
+        var formData = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "send_email.php", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.status === 'success') {
+                 
+                    openModal("thanks");
+                } else {
+                    alert("Произошла ошибка при отправке заявки. Пожалуйста, попробуйте снова.");
+                }
+            }
+        };
+        xhr.send(formData);
+    });
+});
+
+
+
